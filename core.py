@@ -5,9 +5,9 @@ from itertools import cycle
 import re
 
 
-client = commands.Bot(command_prefix = 'c.')
+client = commands.Bot(command_prefix = '.')
 
-status = cycle(['NACL LLC', 'Developing with saltcube'])
+status = cycle(['NACL', 'Developing with NACL Group'])
 
 @client.event
 async def on_ready():
