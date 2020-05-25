@@ -1,2 +1,2 @@
-# KeY-Bot
-KeY KeY
+# EZ-Bot
+EZ
