@@ -112,6 +112,94 @@ class Translate(commands.Cog):
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
+    #Ko to zh-CN
+    @commands.command()
+    async def 한중(self, ctx):
+        reply = ctx.message.content.split(" ")
+        if len(reply) > 1:
+            for i in range(2, len(reply)):
+                reply[1] = reply[1] + " " + reply[i]
+
+        baseurl = "https://openapi.naver.com/v1/papago/n2mt"
+        try:
+            if len(reply) == 1:
+                embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0xffffff)
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                await ctx.send(embed = embed)
+            else:
+                dataParmas = "source=ko&target=zh-CN&text=" + reply[1]
+                # Make a Request Instance
+                request = Request(baseurl)
+                # add header to packet
+                request.add_header("X-Naver-Client-Id", client_id)
+                request.add_header("X-Naver-Client-Secret", client_secret)
+                response = urlopen(request, data=dataParmas.encode("utf-8"))
+
+                responsedCode = response.getcode()
+                if (responsedCode == 200):
+                    response_body = response.read()
+                    # response_body -> byte string : decode to utf-8
+                    api_callResult = response_body.decode('utf-8')
+                    # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
+                    api_callResult = json.loads(api_callResult)
+                    # Final Result
+                    translatedText = api_callResult['message']['result']["translatedText"]
+                    embed = discord.Embed(title="번역결과", description=translatedText, color=0xffffff)
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.send(embed=embed)
+                else:
+                    embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0xffffff)
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.send(embed = embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0xffffff)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+            await ctx.send(embed = embed)
+
+    #Ko to Ja
+    @commands.command()
+    async def 한일(self, ctx):
+        reply = ctx.message.content.split(" ")
+        if len(reply) > 1:
+            for i in range(2, len(reply)):
+                reply[1] = reply[1] + " " + reply[i]
+
+        baseurl = "https://openapi.naver.com/v1/papago/n2mt"
+        try:
+            if len(reply) == 1:
+                embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0xffffff)
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                await ctx.send(embed = embed)
+            else:
+                dataParmas = "source=ko&target=ja&text=" + reply[1]
+                # Make a Request Instance
+                request = Request(baseurl)
+                # add header to packet
+                request.add_header("X-Naver-Client-Id", client_id)
+                request.add_header("X-Naver-Client-Secret", client_secret)
+                response = urlopen(request, data=dataParmas.encode("utf-8"))
+
+                responsedCode = response.getcode()
+                if (responsedCode == 200):
+                    response_body = response.read()
+                    # response_body -> byte string : decode to utf-8
+                    api_callResult = response_body.decode('utf-8')
+                    # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
+                    api_callResult = json.loads(api_callResult)
+                    # Final Result
+                    translatedText = api_callResult['message']['result']["translatedText"]
+                    embed = discord.Embed(title="번역결과", description=translatedText, color=0xffffff)
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.send(embed=embed)
+                else:
+                    embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0xffffff)
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.send(embed = embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0xffffff)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+            await ctx.send(embed = embed)
+
 
 
 def setup(client):
