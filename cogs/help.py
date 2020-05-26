@@ -10,6 +10,7 @@ class Help(commands.Cog):
     # Commands
     @commands.command()
     async def 도움(self, ctx):
+        await ctx.trigger_typing()
         embed = discord.Embed(title="도움말", description= "쓸 예정", color=0xffffff)
         embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
         await ctx.send(embed=embed)

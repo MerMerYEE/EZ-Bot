@@ -16,6 +16,7 @@ class Avatar(commands.Cog):
                                       color=0xffffff)
                 embed.set_image(url=pfp)
                 embed.set_footer(text="Powered by Salt Cube#7951", icon_url="https://raw.githubusercontent.com/SaltCube7/CXT/master/n_images/saltcube.jpg")
+                await ctx.trigger_typing()
                 await ctx.send(embed=embed)
         else:
             pfp = ctx.author.avatar_url
@@ -23,6 +24,7 @@ class Avatar(commands.Cog):
                                 color=0xffffff)
             embed.set_image(url=pfp)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+            await ctx.trigger_typing()
             await ctx.send(embed=embed)
 
 def setup(client):

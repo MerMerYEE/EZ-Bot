@@ -9,6 +9,7 @@ class Say(commands.Cog):
     # Commands
     @commands.command()
     async def 말하기(self, ctx):
+        await ctx.trigger_typing()
         reply = ctx.message.content.split(" ")
         if len(reply) > 1:
             for i in range(2, len(reply)):
