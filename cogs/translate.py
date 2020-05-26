@@ -35,7 +35,9 @@ class Translate(commands.Cog):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         try:
             if len(reply) == 1:
-                await ctx.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0xffffff)
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                await ctx.send(embed = embed)
             else:
                 dataParmas = "source=ko&target=en&text=" + reply[1]
                 # Make a Request Instance
@@ -58,9 +60,13 @@ class Translate(commands.Cog):
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
-                    await ctx.send("에러 코드: " + responsedCode)
+                    embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0xffffff)
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.send(embed = embed)
         except HTTPError as e:
-            await ctx.send("오류가 발생하여 번역에 실패했어요.")
+            embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0xffffff)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+            await ctx.send(embed = embed)
 
 def setup(client):
     client.add_cog(Translate(client))
