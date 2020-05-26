@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import time
 
 class Ping(commands.Cog):
 
@@ -14,8 +15,9 @@ class Ping(commands.Cog):
     # Commands
     @commands.command()
     async def 핑(self, ctx):
-        await ctx.send('Pong!')
-        await ctx.send(f"({str(round(self.client.latency*1000))}ms)")
+        embed = discord.Embed(title="핑", description= f"{str(round(self.client.latency*1000))}ms", color=0xffffff)
+        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+        await ctx.send(embed=embed)
 
 def setup(client):
     client.add_cog(Ping(client))
