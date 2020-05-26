@@ -26,7 +26,7 @@ class Userinfo(commands.Cog):
                                 value="<@" + str(user.id) + ">",
                                 inline=True)
                 embed.set_thumbnail(url=user.avatar_url)
-                embed.set_footer(text="Powered by Salt Cube#7951", icon_url="https://raw.githubusercontent.com/SaltCube7/CXT/master/n_images/saltcube.jpg")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title=ctx.author.name + "님의 정보", description="",
@@ -44,7 +44,7 @@ class Userinfo(commands.Cog):
                             value="<@" + str(ctx.author.id) + ">",
                             inline=True)
             embed.set_thumbnail(url=ctx.author.avatar_url)
-            embed.set_footer(text="Powered by Salt Cube#7951", icon_url="https://raw.githubusercontent.com/SaltCube7/CXT/master/n_images/saltcube.jpg")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed=embed)
 
 def setup(client):

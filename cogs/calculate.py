@@ -19,7 +19,7 @@ class Calculate(commands.Cog):
         res = client.query(reply[1])
         answer = next(res.results).text
         embed = discord.Embed(title="Result", description=answer, color=0xffffff)
-        embed.set_footer(text="Powered by Salt Cube#7951", icon_url="https://raw.githubusercontent.com/SaltCube7/CXT/master/n_images/saltcube.jpg")
+        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
         await ctx.send(embed=embed)
 
 def setup(client):
