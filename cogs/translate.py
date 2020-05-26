@@ -16,8 +16,7 @@ import unicodedata
 import json
 
 
-client_id = ""
-client_secret = ""
+
 
 class Translate(commands.Cog):
 
@@ -36,10 +35,12 @@ class Translate(commands.Cog):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         try:
             if len(reply) == 1:
+                await ctx.trigger_typing()
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0xffffff)
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
+                await ctx.trigger_typing()
                 dataParmas = "source=ko&target=en&text=" + reply[1]
                 # Make a Request Instance
                 request = Request(baseurl)
@@ -61,10 +62,12 @@ class Translate(commands.Cog):
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
+                    await ctx.trigger_typing()
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0xffffff)
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
+            await ctx.trigger_typing()
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0xffffff)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
@@ -80,10 +83,12 @@ class Translate(commands.Cog):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         try:
             if len(reply) == 1:
+                await ctx.trigger_typing()
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0xffffff)
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
+                await ctx.trigger_typing()
                 dataParmas = "source=en&target=ko&text=" + reply[1]
                 # Make a Request Instance
                 request = Request(baseurl)
@@ -105,10 +110,12 @@ class Translate(commands.Cog):
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
+                    await ctx.trigger_typing()
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0xffffff)
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
+            await ctx.trigger_typing()
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0xffffff)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
@@ -128,6 +135,7 @@ class Translate(commands.Cog):
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
+                await ctx.trigger_typing()
                 dataParmas = "source=ko&target=zh-CN&text=" + reply[1]
                 # Make a Request Instance
                 request = Request(baseurl)
@@ -172,6 +180,7 @@ class Translate(commands.Cog):
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
+                await ctx.trigger_typing()
                 dataParmas = "source=ko&target=ja&text=" + reply[1]
                 # Make a Request Instance
                 request = Request(baseurl)
