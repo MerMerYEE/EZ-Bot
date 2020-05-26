@@ -15,7 +15,7 @@ class Avatar(commands.Cog):
                 embed = discord.Embed(title=user.name + "님의 아바타", description="[Link]" + "(" + pfp + ")",
                                       color=0xffffff)
                 embed.set_image(url=pfp)
-                embed.set_footer(text="Powered by Salt Cube#7951", icon_url="https://raw.githubusercontent.com/SaltCube7/CXT/master/n_images/saltcube.jpg")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
         else:
