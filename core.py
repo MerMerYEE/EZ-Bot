@@ -5,7 +5,7 @@ from itertools import cycle
 import re
 
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '.', help_command=None)
 
 status = cycle(['NACL', 'Developing with NACL Group'])
 
@@ -35,4 +35,4 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-client.run('TOKEN HERE')
+client.run('')
