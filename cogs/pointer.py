@@ -63,7 +63,7 @@ class Pointer(commands.Cog):
             await ctx.send(embed=embed)
 
     @포인트.error
-    async def mod_ban_error(error, ctx):
+    async def 포인트_error(error, ctx):
         if isinstance(error, CheckFailure):
             embed = discord.Embed(title="이런!", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0xffffff)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
