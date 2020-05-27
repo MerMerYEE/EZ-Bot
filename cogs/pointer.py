@@ -44,11 +44,9 @@ class Pointer(commands.Cog):
 
     #Commands
     @commands.command()
-    #@commands.has_permissions(administrator=True)
     async def 포인트(self, ctx):
         if (ctx.message.mentions.__len__() > 0):
             for user in ctx.message.mentions:
-
                 if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt"):
                     f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt", 'r')
                     pp = str(f.read())
@@ -77,6 +75,7 @@ class Pointer(commands.Cog):
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
+
             else:
                 embed = discord.Embed(title="에러!", description= "데이터가 존재하지 않아요!", color=0xffffff)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
