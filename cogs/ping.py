@@ -10,7 +10,7 @@ class Ping(commands.Cog):
     # Events
     @commands.Cog.listener()
     async def on_ready(self):
-        print('CXT is Online.')
+        print('EZ is Online.')
 
     # Commands
     @commands.command()
