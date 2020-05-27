@@ -17,7 +17,7 @@ class Ping(commands.Cog):
     async def 핑(self, ctx):
         await ctx.trigger_typing()
         embed = discord.Embed(title="핑", description= f"{str(round(self.client.latency*1000))}ms", color=0xffffff)
-        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
         await ctx.send(embed=embed)
 
 def setup(client):

@@ -20,7 +20,7 @@ class Help(commands.Cog):
         embed.add_field(name='**포인트**', value='*본인의 서버 내 포인트 또는 멘션된 유저의 포인트 정보를 가져옵니다.**', inline = False)
         embed.add_field(name='**지원 서버**', value='**[클릭!](https://discord.gg/HerTmj5)**', inline = False)
         embed.add_field(name="봇 초대하기", value = "[바로가기](https://discord.com/oauth2/authorize?client_id=713182729063235694&scope=bot&permissions=8)", inline = False)
-        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
         embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/ez_bot.png")
         embed.add_field(name='**Desc**', value='**이지 봇은 [오픈소스](https://github.com/Shio7/EZ-Bot)프로젝트입니다.**', inline = False)
         await ctx.send(embed=embed)
