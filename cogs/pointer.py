@@ -6,6 +6,7 @@ import sys
 import re
 import numpy as np
 import json
+import traceback
 
 
 if os.path.isdir("./lib"):
@@ -83,12 +84,47 @@ class Pointer(commands.Cog):
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
 
-    @포인트.error
-    async def 포인트_error(error, ctx):
-        if isinstance(error, CheckFailure):
-            embed = discord.Embed(title="**에러!**", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0xffffff)
+    @commands.command()
+    @has_permissions(administrator = True)
+    async def 포인트추가(self, ctx):
+        if (ctx.message.mentions.__len__() > 0):
+            for user in ctx.message.mentions:
+                if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt"):
+                    f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt", 'r')
+                    pp = int(f.read())
+                    f.close()
+                    reply = ctx.message.content.split(" ")
+                    pp = pp + int(reply[2])
+                    f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt", 'w')
+                    f.write(str(pp))
+                    f.close()
+                    embed = discord.Embed(title="**" + user.name + "**님의 포인트", description= "**" + str(pp) + " pp**",color=0xffffff)
+                    pfp = str(user.avatar_url)
+                    embed.set_thumbnail(url=pfp)
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.trigger_typing()
+                    await ctx.send(embed=embed)
+                else:
+                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                    embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    await ctx.trigger_typing()
+                    await ctx.send(embed=embed)
+
+        else:
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="**에러!**", description= "포인트를 부여할 대상을 멘션해주세요", color=0xffffff)
+            embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed=embed)
+
+    async def on_command_error(error, ctx):
+        if isinstance(error, commands.MissingPermissions):
+                embed = discord.Embed(title="**에러!**", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0xffffff)
+                embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                await ctx.send(embed=embed)
+
 
 def setup(client):
     client.add_cog(Pointer(client))
