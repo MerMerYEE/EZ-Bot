@@ -58,7 +58,6 @@ class Pointer(commands.Cog):
             if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt"):
                 f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt", 'r')
                 pp = str(f.read())
-                print(pp)
                 f.close()
                 embed = discord.Embed(title="**" + ctx.author.name + "**님의 포인트", description= "**" + pp + " pp**",color=0xffffff)
                 pfp = ctx.author.avatar_url
