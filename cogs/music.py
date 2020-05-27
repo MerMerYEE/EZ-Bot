@@ -243,7 +243,10 @@ class Music(commands.Cog):
             except asyncio.TimeoutError:
                 raise VoiceConnectionError(f'Connecting to channel: <{channel}> timed out.')
 
-        await ctx.send(f'Connected to: **{channel}**', delete_after=20)
+        await ctx.trigger_typing()
+        embed = discord.Embed(title="Music", description= f'Connected to: **{channel}**', color=0xffffff)
+        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+        await ctx.send(embed=embed)
 
     @commands.command(name='play', aliases=['sing'])
     async def play_(self, ctx, *, search: str):
