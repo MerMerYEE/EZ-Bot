@@ -20,7 +20,7 @@ class Help(commands.Cog):
         embed.add_field(name='**지원 서버**', value='**[클릭!](https://discord.gg/HerTmj5)**', inline = False)
         embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
         embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/ez_bot.png")
-        embed.add_field(name='**Desc**', value='"**이지 봇은 [오픈소스](https://github.com/Shio7/EZ-Bot)프로젝트입니다."', inline = False)
+        embed.add_field(name='**Desc**', value='**이지 봇은 [오픈소스](https://github.com/Shio7/EZ-Bot)프로젝트입니다.', inline = False)
         await ctx.send(embed=embed)
 
 def setup(client):
