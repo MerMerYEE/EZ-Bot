@@ -3,21 +3,49 @@ from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions, CheckFailure
 import os
 import sys
-import openpyxl
-from openpyxl import Workbook
 import re
 import numpy as np
+import json
+
+
+if os.path.isdir("./lib"):
+    print("Lib Exist")
+else:
+    os.mkdir("./lib")
+    print("Make Lib Folder")
+
+if os.path.isdir("./lib/servers"):
+    print("Servers Folder Exist")
+else:
+    os.mkdir("./lib/servers")
+    print("Make Servers Folder")
+
 
 class Pointer(commands.Cog):
 
     def __init__(self, client):
         self.client = client
 
-    # Commands
+    #Events
+    @commands.Cog.listener()
+    async def on_message(self, ctx):
+        if os.path.isdir("./lib/servers/" + str(ctx.guild.id)):
+            print("Guild Exist")
+        else:
+            os.mkdir("./lib/servers/" + str(ctx.guild.id))
+            print("Mk Guild Folder")
+
+        if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + str(ctx.author.id) + ".txt"):
+            print("Guild-User Exist")
+        else:
+            f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt", 'w')
+            f.write("0")
+            f.close()
+
+    #Commands
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def 포인트(self, ctx):
-
         if (ctx.message.mentions.__len__() > 0):
             for user in ctx.message.mentions:
                 pfp = str(user.avatar_url)
