@@ -4,6 +4,7 @@ from discord.ext.commands import has_permissions, MissingPermissions, CheckFailu
 import os
 import sys
 import openpyxl
+from openpyxl import Workbook
 import re
 import numpy as np
 
@@ -16,6 +17,7 @@ class Pointer(commands.Cog):
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def 포인트(self, ctx):
+
         if (ctx.message.mentions.__len__() > 0):
             for user in ctx.message.mentions:
                 pfp = str(user.avatar_url)
