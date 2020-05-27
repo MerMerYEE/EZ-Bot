@@ -58,7 +58,7 @@ class Pointer(commands.Cog):
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
                 else:
-                    embed = discord.Embed(title="에러!", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.trigger_typing()
@@ -77,7 +77,7 @@ class Pointer(commands.Cog):
                 await ctx.send(embed=embed)
 
             else:
-                embed = discord.Embed(title="에러!", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.trigger_typing()
@@ -86,7 +86,7 @@ class Pointer(commands.Cog):
     @포인트.error
     async def 포인트_error(error, ctx):
         if isinstance(error, CheckFailure):
-            embed = discord.Embed(title="이런!", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0xffffff)
+            embed = discord.Embed(title="**에러!**", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0xffffff)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed=embed)
 
