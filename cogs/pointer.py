@@ -35,7 +35,7 @@ class Pointer(commands.Cog):
             os.mkdir("./lib/servers/" + str(ctx.guild.id))
             print("Mk Guild Folder")
 
-        if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + str(ctx.author.id) + ".txt"):
+        if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt"):
             print("Guild-User Exist")
         else:
             f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt", 'w')
@@ -55,12 +55,22 @@ class Pointer(commands.Cog):
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
         else:
-            pfp = ctx.author.avatar_url
-            embed = discord.Embed(title="**" + ctx.author.name + "**님의 포인트", description="[Link]" + "(" + str(pfp) + ")", color=0xffffff)
-            embed.set_image(url=pfp)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
-            await ctx.trigger_typing()
-            await ctx.send(embed=embed)
+            if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt"):
+                f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt", 'r')
+                pp = str(f.read())
+                print(pp)
+                f.close()
+                embed = discord.Embed(title="**" + ctx.author.name + "**님의 포인트", description= "**" + pp + " pp**",color=0xffffff)
+                pfp = ctx.author.avatar_url
+                embed.set_thumbnail(url=pfp)
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                await ctx.trigger_typing()
+                await ctx.send(embed=embed)
+            else:
+                embed = discord.Embed(title="에러!", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                await ctx.send(embed=embed)
 
     @포인트.error
     async def 포인트_error(error, ctx):

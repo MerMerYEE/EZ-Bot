@@ -12,7 +12,7 @@ class Avatar(commands.Cog):
         if (ctx.message.mentions.__len__() > 0):
             for user in ctx.message.mentions:
                 pfp = str(user.avatar_url)
-                embed = discord.Embed(title=user.name + "님의 아바타", description="[Link]" + "(" + pfp + ")",
+                embed = discord.Embed(title="**" +user.name + "**님의 아바타", description="[Link]" + "(" + pfp + ")",
                                       color=0xffffff)
                 embed.set_image(url=pfp)
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
