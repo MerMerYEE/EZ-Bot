@@ -118,13 +118,13 @@ class Levelling(commands.Cog):
                     draw.text((500, 258), lvl, fill=(36, 36, 36, 255), font=font2)
                     draw.text((475, 377), exp + "/" + expmax, fill=(36, 36, 36, 255), font=font2)
                     base.save("./src/level.png")
-                    await ctx.send_file("./src/level.png")
+                    await ctx.send(file = discord.File("./src/level.png"))
                 else:
                     embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                     await ctx.trigger_typing()
-                    await ctx.send(embed=embed)
+                    await ctx.send_file(embed=embed)
 
         else:
             if os.path.isfile("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt"):
@@ -155,7 +155,7 @@ class Levelling(commands.Cog):
                 draw.text((500, 258), lvl, fill=(36, 36, 36, 255), font=font2)
                 draw.text((475, 377), exp + "/" + expmax, fill=(36, 36, 36, 255), font=font2)
                 base.save("./src/level.png")
-                await ctx.send_file("./src/level.png")
+                await ctx.send(file = discord.File("./src/level.png"))
 
             else:
                 embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
