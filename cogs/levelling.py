@@ -62,7 +62,7 @@ class Levelling(commands.Cog):
                 ws.cell(row=i, column=2).value = "0"
             wb.save("./lib/users/" + str(ctx.author.id) + ".xlsx")
             wb.close()
-            print(str(ctx.author.id) + "의 데이터 생성")
+            print(str(ctx.author.id) + "mk")
 
         #레벨 정리
         if os.path.isfile("./lib/users/" + str(ctx.author.id) + ".xlsx"):
