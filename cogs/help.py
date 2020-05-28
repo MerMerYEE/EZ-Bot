@@ -15,6 +15,7 @@ class Help(commands.Cog):
         embed.add_field(name='**도움**', value='**이 메시지를 보여줍니다.**', inline = False)
         embed.add_field(name='**Utility**', value='**``아바타, 아바타 (멘션), 말하기, 핑, 계산 (식), 한영, 영한, 한일, 일한, 한중, 중한``**', inline = False)
         embed.add_field(name='**서버 이벤트**', value='**``포인트, 포인트 (멘션), 포인트추가 (멘션)``**', inline = False)
+        embed.add_field(name='**레벨**', value='**``레벨, 레벨 (멘션)``**', inline = False)
         embed.add_field(name='**지원 서버**', value='**[클릭!](https://discord.gg/HerTmj5)**', inline = False)
         embed.add_field(name='**음악**', value='**``connect, play, pause, resume, skip, volume(vol), stop, now_playing``**', inline = False)
         embed.add_field(name="봇 초대하기", value = "**[바로가기](https://discord.com/oauth2/authorize?client_id=713182729063235694&scope=bot&permissions=8)**", inline = False)
