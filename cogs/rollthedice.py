@@ -39,6 +39,5 @@ class Dice(commands.Cog):
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
             await ctx.send(embed=embed)
 
-
 def setup(client):
     client.add_cog(Dice(client))
