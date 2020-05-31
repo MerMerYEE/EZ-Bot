@@ -15,8 +15,7 @@ import requests
 import unicodedata
 import json
 
-client_id = "DNhDO1bwMnDP5zXytQeM"
-client_secret = "EBBsshaVW4"
+
 
 class ko_Translate(commands.Cog):
 
