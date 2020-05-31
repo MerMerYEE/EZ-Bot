@@ -14,7 +14,7 @@ class en_Help(commands.Cog):
         embed = discord.Embed(title="User Manual", description= "**EZ Bot v1.1 \nPrefix: ``.``**", color=0xffffff)
         embed.add_field(name='**help**', value='**It shows this message.**', inline = False)
         embed.add_field(name='**Utility**', value='**`avatar`, `avatar (@someone)`, `say`, `ping`, `caluculate (something)`, `roll`, `한영`, `영한`, `한일`, `일한`, `한중`, `중한`**', inline = False)
-        embed.add_field(name='**Server Event**', value='**`point`, `point (@someone)`, `포인트추가 (멘션)`**', inline = False)
+        embed.add_field(name='**Server Event**', value='**`point`, `point (@someone)`, `addpoint (@someone)`**', inline = False)
         embed.add_field(name='**레벨**', value='**`레벨`, `레벨 (멘션)`**', inline = False)
         embed.add_field(name='**음악**', value='**`connect`, `play`, `pause`, `resume`, `skip`, `volume(vol)`, `stop`, `now_playing`**', inline = False)
         embed.add_field(name='**지원 서버**', value='**[클릭!](https://discord.gg/HerTmj5)**', inline = False)
