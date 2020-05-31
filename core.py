@@ -7,7 +7,7 @@ import re
 
 client = commands.Bot(command_prefix = '.', help_command=None)
 
-status = cycle(['NACL', 'Developing with NACL Group'])
+status = cycle(['NACL', 'NACL과 함께 개발중'])
 
 @client.event
 async def on_ready():
@@ -16,20 +16,6 @@ async def on_ready():
 @tasks.loop(seconds=10)
 async def change_status():
     await client.change_presence(status=discord.Status.online,activity=discord.Game(next(status)))
-
-@client.command()
-async def load(ctx, extension):
-    client.load_extension(f'cogs.{extension}')
-
-@client.command()
-async def unload(ctx, extension):
-    client.unload_extension(f'cogs.{extension}')
-
-@client.command()
-async def reload(ctx, extension):
-    client.unload_extension(f'cogs.{extension}')
-    client.load_extension(f'cogs.{extension}')
-    await ctx.send('Reloaded')
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
