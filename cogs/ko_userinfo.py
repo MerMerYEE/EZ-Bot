@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Userinfo(commands.Cog):
+class ko_Userinfo(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -48,4 +48,4 @@ class Userinfo(commands.Cog):
             await ctx.send(embed=embed)
 
 def setup(client):
-    client.add_cog(Userinfo(client))
+    client.add_cog(ko_Userinfo(client))

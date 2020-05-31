@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import time
 
-class Ping(commands.Cog):
+class ko_Ping(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -21,4 +21,4 @@ class Ping(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(client):
-    client.add_cog(Ping(client))
+    client.add_cog(ko_Ping(client))

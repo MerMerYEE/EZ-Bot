@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Say(commands.Cog):
+class ko_Say(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -18,4 +18,4 @@ class Say(commands.Cog):
         await ctx.send(reply[1])
 
 def setup(client):
-    client.add_cog(Say(client))
+    client.add_cog(ko_Say(client))

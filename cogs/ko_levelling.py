@@ -33,7 +33,7 @@ else:
     os.mkdir("./lib/users")
     print("Make Users Folder")
 
-class Levelling(commands.Cog):
+class ko_Levelling(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -166,4 +166,4 @@ class Levelling(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Levelling(client))
+    client.add_cog(ko_Levelling(client))

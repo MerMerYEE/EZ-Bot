@@ -3,7 +3,7 @@ from discord.ext import commands
 import time
 import random
 
-class Dice(commands.Cog):
+class ko_Dice(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -40,4 +40,4 @@ class Dice(commands.Cog):
             await ctx.send(embed=embed)
 
 def setup(client):
-    client.add_cog(Dice(client))
+    client.add_cog(ko_Dice(client))

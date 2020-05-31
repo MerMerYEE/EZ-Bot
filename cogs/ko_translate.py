@@ -15,10 +15,10 @@ import requests
 import unicodedata
 import json
 
+client_id = "DNhDO1bwMnDP5zXytQeM"
+client_secret = "EBBsshaVW4"
 
-
-
-class Translate(commands.Cog):
+class ko_Translate(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -301,4 +301,4 @@ class Translate(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Translate(client))
+    client.add_cog(ko_Translate(client))
