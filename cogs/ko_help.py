@@ -11,7 +11,7 @@ class ko_Help(commands.Cog):
     @commands.command()
     async def 도움(self, ctx):
         await ctx.trigger_typing()
-        embed = discord.Embed(title="도움말", description= "**EZ봇 1.1 \nPrefix: ``.``**", color=0xffffff)
+        embed = discord.Embed(title="도움말", description= "**EZ봇 1.1 \nPrefix: ``.``**", color=0x8680df)
         embed.add_field(name='**도움**', value='**이 메시지를 보여줍니다.**', inline = False)
         embed.add_field(name='**Utility**', value='**`아바타`, `아바타 (멘션)`, `말하기`, `핑`, `계산 (식)`, `주사위`, `한영`, `영한`, `한일`, `일한`, `한중`, `중한`**', inline = False)
         embed.add_field(name='**서버 이벤트**', value='**`포인트`, `포인트 (멘션)`, `포인트추가 (멘션)`**', inline = False)

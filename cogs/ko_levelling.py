@@ -120,7 +120,7 @@ class ko_Levelling(commands.Cog):
                     base.save("./src/level.png")
                     await ctx.send(file = discord.File("./src/level.png"))
                 else:
-                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0x8680df)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                     await ctx.trigger_typing()
@@ -158,7 +158,7 @@ class ko_Levelling(commands.Cog):
                 await ctx.send(file = discord.File("./src/level.png"))
 
             else:
-                embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0x8680df)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                 await ctx.trigger_typing()

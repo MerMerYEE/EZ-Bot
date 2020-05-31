@@ -52,14 +52,14 @@ class Pointer(commands.Cog):
                     f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt", 'r')
                     pp = str(f.read())
                     f.close()
-                    embed = discord.Embed(title="**" + user.name + "**님의 포인트", description= "**" + pp + " pp**",color=0xffffff)
+                    embed = discord.Embed(title="**" + user.name + "**님의 포인트", description= "**" + pp + " pp**",color=0x8680df)
                     pfp = str(user.avatar_url)
                     embed.set_thumbnail(url=pfp)
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
                 else:
-                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0x8680df)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                     await ctx.trigger_typing()
@@ -70,7 +70,7 @@ class Pointer(commands.Cog):
                 f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(ctx.author.id) + ".txt", 'r')
                 pp = str(f.read())
                 f.close()
-                embed = discord.Embed(title="**" + ctx.author.name + "**님의 포인트", description= "**" + pp + " pp**",color=0xffffff)
+                embed = discord.Embed(title="**" + ctx.author.name + "**님의 포인트", description= "**" + pp + " pp**",color=0x8680df)
                 pfp = ctx.author.avatar_url
                 embed.set_thumbnail(url=pfp)
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
@@ -78,7 +78,7 @@ class Pointer(commands.Cog):
                 await ctx.send(embed=embed)
 
             else:
-                embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0x8680df)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                 await ctx.trigger_typing()
@@ -98,14 +98,14 @@ class Pointer(commands.Cog):
                     f = open("./lib/servers/" + str(ctx.guild.id) + "/" + str(user.id) + ".txt", 'w')
                     f.write(str(pp))
                     f.close()
-                    embed = discord.Embed(title="**" + user.name + "**님의 포인트", description= "**" + str(pp) + " pp**",color=0xffffff)
+                    embed = discord.Embed(title="**" + user.name + "**님의 포인트", description= "**" + str(pp) + " pp**",color=0x8680df)
                     pfp = str(user.avatar_url)
                     embed.set_thumbnail(url=pfp)
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
                 else:
-                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0xffffff)
+                    embed = discord.Embed(title="**에러!**", description= "데이터가 존재하지 않아요!", color=0x8680df)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                     await ctx.trigger_typing()
@@ -113,14 +113,14 @@ class Pointer(commands.Cog):
 
         else:
             await ctx.trigger_typing()
-            embed = discord.Embed(title="**에러!**", description= "포인트를 부여할 대상을 멘션해주세요", color=0xffffff)
+            embed = discord.Embed(title="**에러!**", description= "포인트를 부여할 대상을 멘션해주세요", color=0x8680df)
             embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
             await ctx.send(embed=embed)
 
     async def on_command_error(error, ctx):
         if isinstance(error, commands.MissingPermissions):
-                embed = discord.Embed(title="**에러!**", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0xffffff)
+                embed = discord.Embed(title="**에러!**", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0x8680df)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                 await ctx.send(embed=embed)

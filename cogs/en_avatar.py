@@ -13,7 +13,7 @@ class en_Avatar(commands.Cog):
             for user in ctx.message.mentions:
                 pfp = str(user.avatar_url)
                 embed = discord.Embed(title="**" +user.name + "**'s Avatar", description="[Link]" + "(" + pfp + ")",
-                                      color=0xffffff)
+                                      color=0x8680df)
                 embed.set_image(url=pfp)
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
                 await ctx.trigger_typing()
@@ -21,7 +21,7 @@ class en_Avatar(commands.Cog):
         else:
             pfp = ctx.author.avatar_url
             embed = discord.Embed(title="**" + ctx.author.name + "**'s Avatar", description="[Link]" + "(" + str(pfp) + ")",
-                                color=0xffffff)
+                                color=0x8680df)
             embed.set_image(url=pfp)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
             await ctx.trigger_typing()

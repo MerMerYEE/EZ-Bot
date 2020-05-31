@@ -12,7 +12,7 @@ class ko_Userinfo(commands.Cog):
         if (ctx.message.mentions.__len__() > 0):
             for user in ctx.message.mentions:
                 embed = discord.Embed(title="**" + user.name + "**님의 정보", description="",
-                                      color=0xffffff)
+                                      color=0x8680df)
                 embed.add_field(name="**ID**",
                                 value=user.id,
                                 inline=True)
@@ -30,7 +30,7 @@ class ko_Userinfo(commands.Cog):
                 await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title=ctx.author.name + "님의 정보", description="",
-                                  color=0xffffff)
+                                  color=0x8680df)
             embed.add_field(name="**ID**",
                             value=ctx.author.id,
                             inline=True)

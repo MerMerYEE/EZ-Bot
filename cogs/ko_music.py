@@ -244,7 +244,7 @@ class ko_Music(commands.Cog):
                 raise VoiceConnectionError(f'Connecting to channel: <{channel}> timed out.')
 
         await ctx.trigger_typing()
-        embed = discord.Embed(title="Music", description= f'Connected to: **{channel}**', color=0xffffff)
+        embed = discord.Embed(title="Music", description= f'Connected to: **{channel}**', color=0x8680df)
         embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
         await ctx.send(embed=embed)
 
@@ -272,7 +272,7 @@ class ko_Music(commands.Cog):
 
         if not vc or not vc.is_playing():
             await ctx.trigger_typing()
-            embed = discord.Embed(title="Music", description= '저는 지금 아무 트랙도 플레이하고 있지 않아요!', color=0xffffff)
+            embed = discord.Embed(title="Music", description= '저는 지금 아무 트랙도 플레이하고 있지 않아요!', color=0x8680df)
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
             await ctx.send(embed=embed)
         elif vc.is_paused():

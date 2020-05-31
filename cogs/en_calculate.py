@@ -19,7 +19,7 @@ class en_Calculate(commands.Cog):
         client = wolframalpha.Client(app_id)
         res = client.query(reply[1])
         answer = next(res.results).text
-        embed = discord.Embed(title="Result", description=answer, color=0xffffff)
+        embed = discord.Embed(title="Result", description=answer, color=0x8680df)
         embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
         await ctx.send(embed=embed)
 

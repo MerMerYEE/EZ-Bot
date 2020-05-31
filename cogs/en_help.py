@@ -11,7 +11,7 @@ class en_Help(commands.Cog):
     @commands.command()
     async def help(self, ctx):
         await ctx.trigger_typing()
-        embed = discord.Embed(title="User Manual", description= "**EZ Bot v1.1 \nPrefix: ``.``**", color=0xffffff)
+        embed = discord.Embed(title="User Manual", description= "**EZ Bot v1.1 \nPrefix: ``.``**", color=0x8680df)
         embed.add_field(name='**help**', value='**It shows this message.**', inline = False)
         embed.add_field(name='**Utility**', value='**`avatar`, `avatar (@someone)`, `say`, `ping`, `caluculate (something)`, `roll`, `한영`, `영한`, `한일`, `일한`, `한중`, `중한`**', inline = False)
         embed.add_field(name='**Server Event**', value='**`point`, `point (@someone)`, `addpoint (@someone)`**', inline = False)
