@@ -90,8 +90,8 @@ class Levelling(commands.Cog):
     async def 레벨(self, ctx):
         if (ctx.message.mentions.__len__() > 0):
             for user in ctx.message.mentions:
-                if os.path.isfile("./lib/users/" + str(ctx.author.id) + ".xlsx"):
-                    wb = openpyxl.load_workbook("./lib/users/" + str(ctx.author.id) + ".xlsx")
+                if os.path.isfile("./lib/users/" + str(user.id) + ".xlsx"):
+                    wb = openpyxl.load_workbook("./lib/users/" + str(user.id) + ".xlsx")
                     ws = wb.active
                     exp = ws.cell(row=4, column=2).value
                     lvl = ws.cell(row = 2, column = 2).value
