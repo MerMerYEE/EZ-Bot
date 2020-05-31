@@ -15,7 +15,7 @@ class en_Calculate(commands.Cog):
         if len(reply) > 1:
             for i in range(2, len(reply)):
                 reply[1] = reply[1] + " " + reply[i]
-        app_id = "VPR9G7-54PV53JYTK"
+        app_id = ""
         client = wolframalpha.Client(app_id)
         res = client.query(reply[1])
         answer = next(res.results).text
