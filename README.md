@@ -1,5 +1,7 @@
 # EZ-Bot
-**항상 이지봇을 사랑해주시고 이용해주셔서 감사합니다.\n이 봇은 `Shio#7951`와 함께 개발된\n [오픈소스](https://github.com/Shio7/EZ-Bot) 프로젝트입니다.**
+**항상 이지봇을 사랑해주시고 이용해주셔서 감사합니다.  
+이 봇은 `Shio#7951`와 함께 개발된  
+[오픈소스](https://github.com/Shio7/EZ-Bot) 프로젝트입니다.**
 
 [![GitHub issues](https://img.shields.io/github/issues/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/issues)
 [![GitHub forks](https://img.shields.io/github/forks/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/network)
