@@ -3,9 +3,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/network)
 [![GitHub stars](https://img.shields.io/github/stars/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/stargazers)
 [![Discord Server](https://img.shields.io/discord/697690409358589993?style=flat-square)](https://discord.gg/HerTmj5)  
-**항상 이지봇을 사랑해주시고 이용해주셔서 감사합니다.  
-이 봇은 `Shio#7951`와 함께 개발된  
-[오픈소스](https://github.com/Shio7/EZ-Bot) 프로젝트입니다.**
+**항상 이지봇을 사랑해주시고 이용해주셔서 감사합니다. 이 봇은 `Shio#7951`와 함께 개발된 [오픈소스](https://github.com/Shio7/EZ-Bot) 프로젝트입니다.**
 
 # 권장사항
 Embed기능을 사용할 경우 푸터에  
