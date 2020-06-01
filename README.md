@@ -1,6 +1,9 @@
 # EZ-Bot
 EZ-bot
 
+[![GitHub issues](https://img.shields.io/github/issues/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/issues)
+[![GitHub forks](https://img.shields.io/github/forks/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/network)
+[![GitHub stars](https://img.shields.io/github/stars/Shio7/EZ-Bot)](https://github.com/Shio7/EZ-Bot/stargazers)
 [![Discord Server](https://img.shields.io/discord/697690409358589993?style=flat-square)](https://discord.gg/HerTmj5)
 # 권장사항
 Embed기능을 사용할 경우 푸터에  
