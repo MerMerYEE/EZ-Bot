@@ -1,7 +1,7 @@
 # EZ-Bot
 EZ-bot
 
-[![chat](https://img.shields.io/discord/697690409358589993?style=flat-square)](https://discord.gg/HerTmj5)
+[![Discord Server](https://img.shields.io/discord/697690409358589993?style=flat-square)](https://discord.gg/HerTmj5)
 # 권장사항
 Embed기능을 사용할 경우 푸터에  
 ``Offered by NACL - (Name)``이라고
