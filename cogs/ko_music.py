@@ -287,7 +287,10 @@ class ko_Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('I am not currently playing anything!', delete_after=20)
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '저는 지금 음성채널에 들어가 있지 않아요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
         elif not vc.is_paused():
             return
 
@@ -300,7 +303,11 @@ class ko_Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('I am not currently playing anything!', delete_after=20)
+            await ctx.trigger_typing()
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '저는 지금 음성채널에 들어가 있지 않아요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
 
         if vc.is_paused():
             pass
@@ -316,11 +323,18 @@ class ko_Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('I am not currently connected to voice!', delete_after=20)
+            await ctx.trigger_typing()
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '저는 지금 음성채널에 들어가 있지 않아요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
 
         player = self.get_player(ctx)
         if player.queue.empty():
-            return await ctx.send('There are currently no more queued songs.')
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '더 이상 대기중인 곡이 없어요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
 
         # Grab up to 5 entries from the queue...
         upcoming = list(itertools.islice(player.queue._queue, 0, 5))
@@ -336,11 +350,17 @@ class ko_Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('I am not currently connected to voice!', delete_after=20)
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '저는 지금 음성채널에 들어가 있지 않아요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
 
         player = self.get_player(ctx)
         if not player.current:
-            return await ctx.send('I am not currently playing anything!')
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '저는 지금 아무 트랙도 플레이하고 있지 않아요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
 
         try:
             # Remove our previous now_playing message.
@@ -362,7 +382,10 @@ class ko_Music(commands.Cog):
         vc = ctx.voice_client
 
         if not vc or not vc.is_connected():
-            return await ctx.send('I am not currently connected to voice!', delete_after=20)
+            await ctx.trigger_typing()
+            embed = discord.Embed(title="Music", description= '저는 지금 음성채널에 들어가 있지 않아요!', color=0x8680df)
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            await ctx.send(embed=embed)
 
         if not 0 < vol < 101:
             return await ctx.send('Please enter a value between 1 and 100.')
