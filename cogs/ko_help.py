@@ -21,7 +21,7 @@ class ko_Help(commands.Cog):
         embed.add_field(name="**봇 초대하기**", value = "**[바로가기](https://discord.com/oauth2/authorize?client_id=713182729063235694&scope=bot&permissions=8)**", inline = False)
         embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
         embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/ez_bot.png")
-        embed.add_field(name='**Desc**', value='**EZ-Bot v1.1\nPrefix:`.`**', inline = False)
+        embed.add_field(name='**Desc**', value='**EZ-Bot v1.1\nPrefix: `.`**', inline = False)
         await ctx.send(embed=embed)
 
 def setup(client):
