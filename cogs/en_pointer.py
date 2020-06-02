@@ -55,13 +55,13 @@ class Pointer(commands.Cog):
                     embed = discord.Embed(title="**" + user.name + "**'s Point", description= "**" + pp + " pp**",color=0x8680df)
                     pfp = str(user.avatar_url)
                     embed.set_thumbnail(url=pfp)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
                 else:
                     embed = discord.Embed(title="**Error!**", description= "The data does not exist!", color=0x8680df)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
 
@@ -73,14 +73,14 @@ class Pointer(commands.Cog):
                 embed = discord.Embed(title="**" + ctx.author.name + "**'s Point", description= "**" + pp + " pp**",color=0x8680df)
                 pfp = ctx.author.avatar_url
                 embed.set_thumbnail(url=pfp)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
 
             else:
                 embed = discord.Embed(title="**Error!**", description= "The data does not exist!", color=0x8680df)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
 
@@ -101,13 +101,13 @@ class Pointer(commands.Cog):
                     embed = discord.Embed(title="**" + user.name + "**'s Point", description= "**" + str(pp) + " pp**",color=0x8680df)
                     pfp = str(user.avatar_url)
                     embed.set_thumbnail(url=pfp)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
                 else:
                     embed = discord.Embed(title="**Error!**", description= "The data does not exist!", color=0x8680df)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                     await ctx.trigger_typing()
                     await ctx.send(embed=embed)
 
@@ -115,14 +115,14 @@ class Pointer(commands.Cog):
             await ctx.trigger_typing()
             embed = discord.Embed(title="**Error!**", description= "Please mention the user to give Point", color=0x8680df)
             embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
             await ctx.send(embed=embed)
 
     async def on_command_error(error, ctx):
         if isinstance(error, commands.MissingPermissions):
                 embed = discord.Embed(title="**Error!**", description= "You do not have permission to execute this command!", color=0x8680df)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                 await ctx.send(embed=embed)
 
 

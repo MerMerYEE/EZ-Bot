@@ -15,7 +15,7 @@ class ko_Avatar(commands.Cog):
                 embed = discord.Embed(title="**" +user.name + "**님의 아바타", description="[Link]" + "(" + pfp + ")",
                                       color=0x8680df)
                 embed.set_image(url=pfp)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                 await ctx.trigger_typing()
                 await ctx.send(embed=embed)
         else:
@@ -23,7 +23,7 @@ class ko_Avatar(commands.Cog):
             embed = discord.Embed(title="**" + ctx.author.name + "**님의 아바타", description="[Link]" + "(" + str(pfp) + ")",
                                 color=0x8680df)
             embed.set_image(url=pfp)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
             await ctx.trigger_typing()
             await ctx.send(embed=embed)
 
