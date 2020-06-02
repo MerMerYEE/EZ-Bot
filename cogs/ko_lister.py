@@ -5,7 +5,7 @@ import os
 import re
 
 if os.path.isfile("./lib/lister.txt"):
-    print("카운터파일 존재")
+    print("lister exist")
 else:
     f = open("./lib/lister.txt", 'w')
     f.write("0")
