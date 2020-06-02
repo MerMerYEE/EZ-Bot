@@ -15,12 +15,12 @@ class ko_Calculate(commands.Cog):
         if len(reply) > 1:
             for i in range(2, len(reply)):
                 reply[1] = reply[1] + " " + reply[i]
-        app_id = ""
+        app_id = "VPR9G7-54PV53JYTK"
         client = wolframalpha.Client(app_id)
         res = client.query(reply[1])
         answer = next(res.results).text
         embed = discord.Embed(title="Result", description=answer, color=0x8680df)
-        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+        embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
         await ctx.send(embed=embed)
 
 def setup(client):
