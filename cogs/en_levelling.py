@@ -40,6 +40,13 @@ class en_Levelling(commands.Cog):
 
     # Events
     @commands.Cog.listener()
+    async def on_command_error(self,ctx,error):
+        if isinstance(error, commands.CheckFailure):
+                embed = discord.Embed(title="**Error!**", description= "You don't have permission to use this command.", color=0x8680df)
+                embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
+                await ctx.send(embed=embed)
+
     async def on_message(self, ctx):
         #폴더 만들기
         if os.path.isdir("./lib/users"):
