@@ -19,7 +19,7 @@ class ko_lister(commands.Cog):
 
     # Events
     @commands.Cog.listener()
-    async def on_message(self):
+    async def on_message(self, ctx):
         f = open("./lib/lister.txt", 'r')
         ln = int(f.read())
         f.close()
