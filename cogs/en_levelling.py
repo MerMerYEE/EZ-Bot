@@ -47,51 +47,6 @@ class en_Levelling(commands.Cog):
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                 await ctx.send(embed=embed)
 
-    async def on_message(self, ctx):
-        #폴더 만들기
-        if os.path.isdir("./lib/users"):
-            print("Users Folder Exist")
-        else:
-            os.mkdir("./lib/users")
-            print("Make Users Folder")
-
-        #유저정보 생성
-        if os.path.isfile("./lib/users/" + str(ctx.author.id) + ".xlsx"):
-            print("User-File Exist")
-        else:
-            wb = Workbook()
-            ws = wb.active
-            ws.cell(row=1, column=1).value = "Exp"
-            ws.cell(row=2, column = 1).value = "Lvl"
-            ws.cell(row=3, column = 1).value = "levelmax"
-            ws.cell(row=4, column = 1).value = "currentexp"
-            for i in range (1,5):
-                ws.cell(row=i, column=2).value = "0"
-            wb.save("./lib/users/" + str(ctx.author.id) + ".xlsx")
-            wb.close()
-            print(str(ctx.author.id) + "mk")
-
-        #level 정리
-        if os.path.isfile("./lib/users/" + str(ctx.author.id) + ".xlsx"):
-            wb = openpyxl.load_workbook("./lib/users/" + str(ctx.author.id) + ".xlsx")
-            ws = wb.active
-            currentexp = float(ws.cell(row=1, column=2).value)
-            crlvl = int(ws.cell(row=2, column=2).value)
-            addvalue = random.randrange(1,8)
-            currentexp = currentexp + (addvalue/8)
-            nowexp = float(ws.cell(row=4, column=2).value)
-            nowexp = nowexp + (addvalue/8)
-            ws.cell(row=1, column=2).value = str(currentexp)
-            expmax = crlvl**2 - 2*crlvl + 7
-            ws.cell(row=3, column=2).value = str(expmax)
-            if (nowexp >= expmax):
-                crlvl = crlvl + 1
-                nowexp = 0
-            ws.cell(row=4, column=2).value = str(nowexp)
-            ws.cell(row=2, column=2).value = str(crlvl)
-            wb.save("./lib/users/" + str(ctx.author.id) + ".xlsx")
-            wb.close()
-
     # Commands
     @commands.command()
     async def level(self, ctx):
