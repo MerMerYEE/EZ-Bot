@@ -29,9 +29,9 @@ class Pointer(commands.Cog):
 
     #Events
     @commands.Cog.listener()
-    async def on_command_error(self,ctx,error):
-        if isinstance(error, commands.CheckFailure):
-                embed = discord.Embed(title="**에러!**", description= "당신은 이 명령어를 실행할 권한이 없어요!", color=0x8680df)
+    async def on_command_error(error, ctx):
+        if isinstance(error, commands.MissingPermissions):
+                embed = discord.Embed(title="**Error!**", description= "You do not have permission to execute this command!", color=0x8680df)
                 embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                 embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
                 await ctx.send(embed=embed)

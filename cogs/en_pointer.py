@@ -118,12 +118,6 @@ class Pointer(commands.Cog):
             embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
             await ctx.send(embed=embed)
 
-    async def on_command_error(error, ctx):
-        if isinstance(error, commands.MissingPermissions):
-                embed = discord.Embed(title="**Error!**", description= "You do not have permission to execute this command!", color=0x8680df)
-                embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
-                await ctx.send(embed=embed)
 
 
 def setup(client):
