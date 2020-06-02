@@ -15,7 +15,8 @@ import requests
 import unicodedata
 import json
 
-
+client_id = "DNhDO1bwMnDP5zXytQeM"
+client_secret = "EBBsshaVW4"
 
 class ko_Translate(commands.Cog):
 
@@ -36,7 +37,7 @@ class ko_Translate(commands.Cog):
             if len(reply) == 1:
                 await ctx.trigger_typing()
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0x8680df)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
                 await ctx.trigger_typing()
@@ -58,17 +59,17 @@ class ko_Translate(commands.Cog):
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="번역결과", description=translatedText, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
                     await ctx.trigger_typing()
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
             await ctx.trigger_typing()
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0x8680df)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
     #En to Ko
@@ -84,7 +85,7 @@ class ko_Translate(commands.Cog):
             if len(reply) == 1:
                 await ctx.trigger_typing()
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0x8680df)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
                 await ctx.trigger_typing()
@@ -106,17 +107,17 @@ class ko_Translate(commands.Cog):
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="번역결과", description=translatedText, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
                     await ctx.trigger_typing()
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
             await ctx.trigger_typing()
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0x8680df)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
     #Ko to zh-CN(간체)
@@ -131,7 +132,7 @@ class ko_Translate(commands.Cog):
         try:
             if len(reply) == 1:
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0x8680df)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
                 await ctx.trigger_typing()
@@ -153,15 +154,15 @@ class ko_Translate(commands.Cog):
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="번역결과", description=translatedText, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0x8680df)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
     #Ko to Ja
@@ -176,7 +177,7 @@ class ko_Translate(commands.Cog):
         try:
             if len(reply) == 1:
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0x8680df)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
                 await ctx.trigger_typing()
@@ -198,15 +199,15 @@ class ko_Translate(commands.Cog):
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="번역결과", description=translatedText, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0x8680df)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
     #Ja to Ko
@@ -221,7 +222,7 @@ class ko_Translate(commands.Cog):
         try:
             if len(reply) == 1:
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0x8680df)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
                 dataParmas = "source=ja&target=ko&text=" + reply[1]
@@ -242,15 +243,15 @@ class ko_Translate(commands.Cog):
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="번역결과", description=translatedText, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0x8680df)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
     #zh-CN to Ko(간체)
@@ -265,7 +266,7 @@ class ko_Translate(commands.Cog):
         try:
             if len(reply) == 1:
                 embed = discord.Embed(title="에러", description="단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.", color=0x8680df)
-                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                 await ctx.send(embed = embed)
             else:
                 dataParmas = "source=zh-CN&target=ko&text=" + reply[1]
@@ -286,15 +287,15 @@ class ko_Translate(commands.Cog):
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="번역결과", description=translatedText, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed=embed)
                 else:
                     embed = discord.Embed(title="에러", description="에러 코드: " + responsedCode, color=0x8680df)
-                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+                    embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
                     await ctx.send(embed = embed)
         except HTTPError as e:
             embed = discord.Embed(title="에러", description="오류가 발생하여 번역에 실패했어요.", color=0x8680df)
-            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio7.png")
+            embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio.png")
             await ctx.send(embed = embed)
 
 
