@@ -41,7 +41,7 @@ class ko_Moderation(commands.Cog):
                 else:
                     await user.add_roles(role)
                     await ctx.trigger_typing()
-                    embed = discord.Embed(title="**Moderation**", description= f"{user.mention}가 {reason}란 이유로 음소거 처리되었어요.", color=0x8680df)
+                    embed = discord.Embed(title="**Moderation**", description= f"{user.mention}가 음소거 처리되었어요.", color=0x8680df)
                     embed.set_thumbnail(url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/shio_error.png")
                     embed.set_footer(text="Offered by NACL - Shio", icon_url="https://raw.githubusercontent.com/Shio7/EZ-Bot/master/images/Shio8.png")
         else:
